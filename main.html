@@ -36,67 +36,58 @@
                 <li>Donating some funds in blood bank to help needy people</li>
             </ol>
         </div>
-        <h4 data-scroll data-scroll-speed="1">Here is a form to donate some Amount please donate as you can </h4>
-        <form class="form_wht" action="/action_page.php">
-            <input type="text" placeholder="Enter your Name" style="width: 120px;" class="name"><br>
-            <input type="date" style="width: 120px;" class="date"><br>
-            <input type="number" placeholder="+91 " style="width: 120px" class="number"><br>
-            <input type="number" placeholder="Enter your Adhaar number" style="width: 120px" class="age"><br>
-            <br>
+        <h4 data-scroll data-scroll-speed="1">Here is a form to donate some Amount please donate as you can... </h4>
+        <form class="form_wht" action="https://api.web3forms.com/submit" method="post">
+            <input type="hidden" name="access_key" value="412331e2-e0dd-43e6-9b4c-ee43df87dcbb">
+            <input type="text" placeholder="Enter your Name" name="name" class="name">
+            <input type="date" name="date" class="date">
+            <input type="number" placeholder="+91 " name="phone" class="number">
+            <input type="number" placeholder="Enter your Adhaar number" name="adhaar" class="age">
             <div class="radio-container">
-                <input type="radio" id="male" Name="gender"> <label for="males">Male</label>
-                <input type="radio" id="female" Name="gender"><label for="females">Female</label>
+                <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
             </div>
-            <div class="radio-container">
-                <input type="number" placeholder="Enter the amount of donation" style="width: 180px" class="amount"
-                name="quantity" inputmode="numeric"></label>
+            <input type="number" placeholder="Enter the amount of donation" class="amount" name="quantity"
+                inputmode="numeric">
+            <div id="submit">
+                <input type="submit" value="Submit and Pay">
             </div>
-                <div id="submit">
-                    <input type="Submit" name="submit" value="Submit and Pay">
-                </div>
         </form>
         <div id="page3">
             <video autoplay muted src="flood.mp4"></video>
         </div>
-        <div data-scroll data-scroll-speed="2" id="page4">
-            <video autoplay muted src="1video.mp4"></video>
-            <div class="overlay"></div>
-            <div id="videocont">
-                <video autoplay muted src="2video.mp4"></video>
-                <div class="overlay"></div>
+        <div>
+            <div data-scroll data-scroll-speed="2" id="page4">
+                <div id="videos-row">
+                    <div class="videocont">
+                        <video autoplay muted src="1video.mp4"></video>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="videocont">
+                        <video autoplay muted src="2video.mp4"></video>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="videocont">
+                        <video autoplay muted src="3video.mp4"></video>
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <h6>Our Popular Brand Sponsors are -</h6>
+                <div id="sponline">
+                    <img src="fllipkart.png" id="sflip" alt="flipkart">
+                    <img src="amazon.png" id="samaz" alt="amazon">
+                    <img src="myntra.png" id="smynt" alt="myntra">
+                    <img src="shopclues.png" id="sshop" alt="shopclues">
+                </div>
             </div>
-            <div id="videocont">
-                <video autoplay muted src="3video.mp4"></video>
-                <div class="overlay"></div>
-            </div>
-        </div>
-    </div>
-    <div id="page4">
-        <video autoplay muted src="1video.mp4"></video>
-        <div class="overlay"></div>
-        <div id="vidone">
-            <div class="videocont">
-                <video autoplay muted src="2video.mp4"></video>
-                <div class="overlay"></div>
-            </div>
-            <div class="videocont">
-                <video autoplay muted src="3video.mp4"></video>
-                <div class="overlay"></div>
-            </div>
-        </div>
-        <h6>Our Popular Brand Sponsors are -</h6>
-        <div id="sponline">
-            <img src="fllipkart.png" id="sflip" alt="flipkart">
-            <img src="amazon.png" id="samaz" alt="amazon">
-            <img src="myntra.png" id="smynt" alt="myntra">
-            <img src="shopclues.png" id="sshop" alt="shopclues">
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

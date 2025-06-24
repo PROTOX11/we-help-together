@@ -1,19 +1,21 @@
-/* Base styles (mobile-first approach) */
-body, html {
+o scroll  t/* Base styles (mobile-first approach) */
+body,
+html {
     background-color: rgb(235, 251, 255);
     overflow-x: hidden;
     overflow-y: auto;
-    height: auto;
+    height: 100%;
     min-height: 100vh;
 }
 
 #main {
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 100vh !important;
-    max-height: none !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    position: relative;
 }
 
 /* Logo styles */
@@ -25,6 +27,16 @@ body, html {
     filter: grayscale(100%);
     float: left;
 }
+#hunline {
+    padding-top: 100px;
+    font-size: 200%;
+}
+
+#page2 {
+    font-size: 120%;
+    padding-top: 50px;
+}
+
 
 /* Page4 styles */
 #page4 {
@@ -36,6 +48,101 @@ body, html {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+}
+
+/* Remove conflicting flex-direction and video width in media queries */
+@media screen and (min-width: 768px) {
+    #page4 {
+        flex-direction: column !important;
+    }
+
+    #page4 video {
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #page4 {
+        flex-direction: column !important;
+    }
+
+    #page4 video {
+        width: 100% !important;
+        max-width: none !important;
+    }
+}
+
+#videos-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.videocont {
+    flex: 1 1 0;
+    max-width: 33%;
+    box-sizing: border-box;
+}
+
+.videocont video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#sponline {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#videos-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.videocont {
+    flex: 1 1 0;
+    max-width: 33%;
+    box-sizing: border-box;
+}
+
+.videocont video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#sponline {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #page4 video {
@@ -53,8 +160,37 @@ body, html {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 10px;
+}
+
+h6 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#vidone {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.videocont {
+    flex: 1 1 0;
+    max-width: 33%;
+    box-sizing: border-box;
+}
+
+.videocont video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 #sponline img {
@@ -63,6 +199,14 @@ body, html {
     border-radius: 30px;
 }
 
+
+#page3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 15px;
+}
 /* Tablet styles */
 @media screen and (min-width: 768px) {
     .logoa2 {
@@ -86,6 +230,8 @@ body, html {
         width: 180px;
     }
 }
+
+
 
 /* Desktop styles */
 @media screen and (min-width: 1024px) {
@@ -132,48 +278,57 @@ body, html {
     z-index: 1;
 }
 
-/* Form styles */
+#page3 {
+    border-radius: 15px;
+    padding: 15px;
+}
+
 .form_wht {
-    width: 90%;
-    max-width: 400px;
-    margin: 20px auto;
+    width: 60vw;
+    max-width: 600px;
+    min-width: 320px;
+    margin: 40px auto;
+    border-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center form vertically and horizontally */
+    position: relative;
+    top: 50px;
+    padding-bottom: 50px;
 }
 
 .form_wht input[type="text"],
 .form_wht input[type="date"],
 .form_wht input[type="number"] {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 10px;
-    padding: 8px;
+    width: 90%;
+    min-width: 220px;
+    max-width: 500px;
+    margin-bottom: 18px;
+    padding: 16px 20px;
+    font-size: 1.2rem;
+    border-radius: 20%;
+    border: 1px solid #b3d4fc;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .radio-container {
+    width: 90%;
+    justify-content: center;
     display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
-#submit {
-    text-align: center;
-    margin-top: 15px;
-}
 
 #submit input[type="submit"] {
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(22, 128, 249);
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-#submit input[type="submit"]:hover {
-    background-color: rgb(10, 90, 180);
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 20%;
 }
 
 /* Tablet and above */
@@ -187,6 +342,14 @@ body, html {
     .form_wht input[type="number"] {
         max-width: 400px;
     }
+}
+
+/* Increase h4 font size and center it */
+h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 #page1 .overlay {
@@ -203,7 +366,7 @@ body, html {
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 115px;
     color: rgb(0, 145, 255);
     font-family: futura;
     text-transform: uppercase;
@@ -211,9 +374,10 @@ h1 {
     padding: 0;
     position: relative;
     width: 100vw;
-    padding-top: 1vh;
+    padding-top: 250px;
     letter-spacing: -1px;
     margin-bottom: 100px;
+    /* margin-top: 600px; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
