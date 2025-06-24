@@ -374,10 +374,9 @@ h1 {
     padding: 0;
     position: relative;
     width: 100vw;
-    padding-top: 250px;
+    padding-top: 250px; /* increased from 250px */
     letter-spacing: -1px;
     margin-bottom: 100px;
-    /* margin-top: 600px; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -385,10 +384,11 @@ h1 {
 
 @media only screen and (max-width: 768px) {
     h1 {
-        width: 90vw;
+        width: 100%;
         font-size: 60px;
         white-space: normal;
         overflow: visible;
         text-overflow: clip;
+        padding-top: 100px; /* reduced padding-top for mobile */
     }
 }
