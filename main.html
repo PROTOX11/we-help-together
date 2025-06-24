@@ -2,60 +2,101 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="now.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpage</title>
-    <script>
-        function displayDateTime() {
-            var dateTimeElement = document.getElementById("datetime");
-            var now = new Date();
-            var date = now.toLocaleDateString();
-            var time = now.toLocaleTimeString();
-            dateTimeElement.innerHTML = "Date: " + date + "<br>Time: " + time;
-        }
-        setInterval(displayDateTime, 1000);
-    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sky.css" />
+    <title>WHT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
 
 <body>
-    <div id="datetime"></div>
-    <h1>Hey! Prakash, <br>How are you......... Let's Make Something New Today.</h1>
-    <a href="https://mail.google.com"> <img src="mail.png" alt="Gmail" class="maillogo">
-        <a href="https://chat.openai.com/chat"> <img src="gpt.png" alt="chat gpt" class="chatgpt">
-            <a href="https://twitter.com/home"> <img src="ttr.png" alt="twitter" class="tweet">
-                <a href="https://www.freecodecamp.org/learn/"> <img src="fcc.png" alt="free code camp" class="freecc">
-                    <a href="https://github.com/explore"> <img src="gh.png" alt="github" class="github">
-                        <a href="https://www.linkedin.com/feed/"> <img src="li.png" alt="linked in" class="linked">
-                            <a href="https://leetcode.com/"> <img src="leet.png" alt="leet code" class="leet">
-                                <a href="https://www.upwork.com/"> <img src="upw.png" alt="up work" class="upwork">
-                                    <a href=https://codepen.io/trending> <img src="co.png" alt="code open"
-                                            class="codeopen">
-                                        <a href="https://www.programiz.com/javascript/online-compiler/"><img
-                                                src="pro.png" alt="programiz" class="prog">
-                                            <a href="https://stackoverflow.com/"><img src="stackoverflow.png"
-                                                    alt="stack over flow" class="stack">
+    <div id="main">
+        <img src=LOGO2.png alt="website logo" class="logoa2">
+        <div id="page1">
+            <h1>We Help Together</h1>
+            <div id="video-container">
+                <video autoplay muted src="hunger.mp4"></video>
+                <div data-scroll data-scroll-speed="2" id="hunline">Holistic Support, Including Shelter, Clothing,
+                    and Medical Aid, to Restore Hope.
+                </div>
+            </div>
+        </div>
+        <div data-scroll data-scroll-speed="2" id="page2">
+            <div class="agro">A Group of Society Where Everyone Support Each Other And Help Each Other to Survive</div>
+            <div data-scroll data-scroll-speed="1" class="weare">
+                <h2>We are here to contribute some donated amount of money and we distribute who is really needed
+                </h2>
+            </div>
+            <ol data-scroll data-scroll-speed="1" class="content2">
+                <li>Helpig poor people who really needs amount for their treatment</li>
+                <li>Helping people who is suffering from flood feeding them a needy food to survive</li>
+                <li>Feeding poor people who is hungry</li>
+                <li>Helping people who are not able to earn money due to some reason</li>
+                <li>Donating some funds in blood bank to help needy people</li>
+            </ol>
+        </div>
+        <h4 data-scroll data-scroll-speed="1">Here is a form to donate some Amount please donate as you can </h4>
+        <form class="form_wht" action="/action_page.php">
+            <input type="text" placeholder="Enter your Name" style="width: 120px;" class="name"><br>
+            <input type="date" style="width: 120px;" class="date"><br>
+            <input type="number" placeholder="+91 " style="width: 120px" class="number"><br>
+            <input type="number" placeholder="Enter your Adhaar number" style="width: 120px" class="age"><br>
+            <br>
+            <div class="radio-container">
+                <input type="radio" id="male" Name="gender"> <label for="males">Male</label>
+                <input type="radio" id="female" Name="gender"><label for="females">Female</label>
+            </div>
+            <div class="radio-container">
+                <input type="number" placeholder="Enter the amount of donation" style="width: 180px" class="amount"
+                name="quantity" inputmode="numeric"></label>
+            </div>
+                <div id="submit">
+                    <input type="Submit" name="submit" value="Submit and Pay">
+                </div>
+        </form>
+        <div id="page3">
+            <video autoplay muted src="flood.mp4"></video>
+        </div>
+        <div data-scroll data-scroll-speed="2" id="page4">
+            <video autoplay muted src="1video.mp4"></video>
+            <div class="overlay"></div>
+            <div id="videocont">
+                <video autoplay muted src="2video.mp4"></video>
+                <div class="overlay"></div>
+            </div>
+            <div id="videocont">
+                <video autoplay muted src="3video.mp4"></video>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page4">
+        <video autoplay muted src="1video.mp4"></video>
+        <div class="overlay"></div>
+        <div id="vidone">
+            <div class="videocont">
+                <video autoplay muted src="2video.mp4"></video>
+                <div class="overlay"></div>
+            </div>
+            <div class="videocont">
+                <video autoplay muted src="3video.mp4"></video>
+                <div class="overlay"></div>
+            </div>
+        </div>
+        <h6>Our Popular Brand Sponsors are -</h6>
+        <div id="sponline">
+            <img src="fllipkart.png" id="sflip" alt="flipkart">
+            <img src="amazon.png" id="samaz" alt="amazon">
+            <img src="myntra.png" id="smynt" alt="myntra">
+            <img src="shopclues.png" id="sshop" alt="shopclues">
+        </div>
+    </div>
 
-                                                <a href="https://replit.com/"> <img src="rep.png" alt="replit"
-                                                        class="repl">
-                                                    <a href="https://discord.com/"> <img src="disc.png" alt="discord"
-                                                            class="disco">
-                                                        <a href="https://www.youtube.com/"> <img src="you.png"
-                                                                alt="youtube" class="yout">
-                                                        </a>
-                                                        </br>
-                                                        </br>
-                                                        <div class="conatainer">
-                                                            <form action="https://www.google.com/search"
-                                                                class="search_bar">
-                                                                <input type="text" placeholder="search anything"
-                                                                    name="q">
-                                                                <button type="submit"><img src="search.png"
-                                                                        alt="search bar">
-                                                            </form>
-                                                        </div>
-                                                        <h3> Two Most Powerful Warriors are Patience and Time.....</h3>
-
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
